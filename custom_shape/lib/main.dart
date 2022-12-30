@@ -1,3 +1,5 @@
+import 'package:custom_shape/bezier/bezier_curves.dart';
+import 'package:custom_shape/clippers.dart';
 import 'package:custom_shape/custom_shpes.dart';
 import 'package:flutter/material.dart';
 
@@ -25,6 +27,6 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: HomePage());
+        home: bezierCurves());
   }
 }

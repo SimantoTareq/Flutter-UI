@@ -32,6 +32,19 @@ class Clip1Clipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     // TODO: implement getClip
     Path path = Path();
+    //for triangle
+    // path.lineTo(0, size.height);
+    // path.lineTo(size.width, size.height);
+
+    //for curved
+    path.lineTo(0, size.height);
+    path.lineTo(size.width, size.height);
+
+    // path.quadraticBezierTo(0, size.height, 0, 0);
+    path.quadraticBezierTo(0, 0, 0, size.height);
+
+    // path.lineTo(size.width, 0);
+
     return path;
   }
 
