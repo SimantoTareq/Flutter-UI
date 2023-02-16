@@ -16,12 +16,17 @@ class _TaskListState extends State<TaskList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 110,
+      padding: EdgeInsets.fromLTRB(14, 0, 14, 0),
+      height: 91,
       child: ListView.separated(
+          physics: ClampingScrollPhysics(),
+          primary: false,
+          shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return Container(
-              padding: EdgeInsets.symmetric(horizontal: 7, vertical: 14),
+              width: 139,
+              padding: EdgeInsets.symmetric(horizontal: 7, vertical: 8),
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 255, 255, 255),
                 borderRadius: BorderRadius.circular(12),

@@ -25,6 +25,9 @@ class _TopPartState extends State<TopPart> {
                 "Hi, Habib 👋",
                 style: myStyle(18, Color(0xffFFFFFF), FontWeight.w600),
               ),
+              SizedBox(
+                height: 7,
+              ),
               Text(
                 "Let's explore your notes",
                 style: myStyle(
@@ -36,7 +39,7 @@ class _TopPartState extends State<TopPart> {
             height: 45,
             width: 45,
             decoration: BoxDecoration(
-              color: Colors.green,
+              color: Color(0xff24966D),
               borderRadius: BorderRadius.circular(50),
             ),
             child: Image.asset(
