@@ -19,88 +19,85 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffF3F3F3),
-      body: SingleChildScrollView(
-        // physics: NeverScrollableScrollPhysics(),
-        child: Column(
-          children: [
-            Stack(
-              children: [
-                Container(
-                  padding: EdgeInsets.fromLTRB(14, 20, 14, 0),
-                  height: 400,
-                  decoration: BoxDecoration(
-                    color: Color(0xffF3F3F3),
-                    // gradient: LinearGradient(
-                    //     begin: Alignment.topLeft,
-                    //     end: Alignment.topRight,
-                    //     colors: [
-                    //       Color(0xff0E4628),
-                    //       Color(0xff0B3D2B),
-                    //       Color(0xff053833)
-                    //     ]),
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(40),
-                        bottomRight: Radius.circular(40)),
-                  ),
+      body: Column(
+        children: [
+          Stack(
+            children: [
+              Container(
+                padding: EdgeInsets.fromLTRB(14, 20, 14, 0),
+                height: 400,
+                decoration: BoxDecoration(
+                  color: Color(0xffF3F3F3),
+                  // gradient: LinearGradient(
+                  //     begin: Alignment.topLeft,
+                  //     end: Alignment.topRight,
+                  //     colors: [
+                  //       Color(0xff0E4628),
+                  //       Color(0xff0B3D2B),
+                  //       Color(0xff053833)
+                  //     ]),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(40),
+                      bottomRight: Radius.circular(40)),
                 ),
-                Container(
-                  padding: EdgeInsets.fromLTRB(14, 30, 14, 0),
-                  height: 340,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.topRight,
-                        colors: [
-                          Color(0xff0E4628),
-                          Color(0xff0B3D2B),
-                          Color(0xff053833)
-                        ]),
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(40),
-                        bottomRight: Radius.circular(40)),
-                  ),
-                  child: Column(
-                    children: [
-                      TopPart(),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      WelcomeCard(),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Reminder Task",
-                            style:
-                                myStyle(14, Color(0xffFFFFFF), FontWeight.w600),
-                          ),
-                          Text(
-                            "See All",
-                            style: myStyle(
-                                12,
-                                Color(0xffFFFFFF).withOpacity(0.7),
-                                FontWeight.w400),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                    ],
-                  ),
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(14, 30, 14, 0),
+                height: 340,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.topRight,
+                      colors: [
+                        Color(0xff0E4628),
+                        Color(0xff0B3D2B),
+                        Color(0xff053833)
+                      ]),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(40),
+                      bottomRight: Radius.circular(40)),
                 ),
-                Positioned(
-                  bottom: 30,
-                  child: TaskList(),
-                )
-              ],
-            ),
-            AllTask()
-          ],
-        ),
+                child: Column(
+                  children: [
+                    TopPart(),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    WelcomeCard(),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Reminder Task",
+                          style:
+                              myStyle(14, Color(0xffFFFFFF), FontWeight.w600),
+                        ),
+                        Text(
+                          "See All",
+                          style: myStyle(12, Color(0xffFFFFFF).withOpacity(0.7),
+                              FontWeight.w400),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                bottom: 25,
+                left: 0,
+                right: -16,
+                child: TaskList(),
+              )
+            ],
+          ),
+          Expanded(child: AllTask())
+        ],
       ),
     );
   }
