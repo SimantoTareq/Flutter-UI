@@ -19,8 +19,6 @@ class _TaskListState extends State<TaskList> {
       padding: EdgeInsets.fromLTRB(14, 0, 14, 0),
       height: 91,
       child: ListView.separated(
-          //physics: ClampingScrollPhysics(),
-          //primary: false,
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {

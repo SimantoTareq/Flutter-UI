@@ -31,9 +31,6 @@ class _AllTaskState extends State<AllTask> {
               ),
             ],
           ),
-          // SizedBox(
-          //   height: 12,
-          // ),
           Expanded(
             child: Container(
               //height: double.infinity,
