@@ -38,6 +38,7 @@ class _MyAppState extends State<MyApp> {
         child: Consumer(builder: (context, themeData, cha) {
           bool isDark = Provider.of<ThemeProvider>(context).getTheheData;
           return MaterialApp(
+              debugShowCheckedModeBanner: false,
               title: 'Flutter Demo',
               theme: ThemeData(
                   iconTheme: IconThemeData(
