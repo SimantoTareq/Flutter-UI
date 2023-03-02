@@ -1,6 +1,6 @@
 # Flutter-UI
 
-| First Header  | Second Header |
+| Project  Name  | Project Output |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
