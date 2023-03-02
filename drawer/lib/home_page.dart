@@ -48,9 +48,22 @@ class _Home_pageState extends State<Home_page> {
                   controller: emailController,
                   hintText: "Enter your Email",
                   labelText: "Enter your Email",
-                  keyboardType: TextInputType.phone,
+                  keyboardType: TextInputType.emailAddress,
                   Prefixicon: Icons.email,
-                  validator: (value) {},
+                  validator: (value) {
+                    // Check if this field is empty
+                    if (value == null || value.isEmpty) {
+                      return 'This field is required';
+                    }
+
+                    // using regular expression
+                    if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value)) {
+                      return "Please enter a valid email address";
+                    }
+
+                    // the email is valid
+                    return null;
+                  },
                 ),
                 SizedBox(
                   height: 30,
