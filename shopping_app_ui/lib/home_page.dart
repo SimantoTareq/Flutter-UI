@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:shopping_app_ui/navbar/navbar.dart';
+import 'package:shopping_app_ui/pages/cart.dart';
 import 'package:shopping_app_ui/style/my_style.dart';
 import 'package:sizer/sizer.dart';
 
@@ -17,8 +19,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Color(0xffF8F9FA),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 5.h),
-        child: Column(
+        padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
+        child: ListView(
           children: [
             Container(
               child: Row(
@@ -58,41 +60,47 @@ class _HomePageState extends State<HomePage> {
                       )
                     ],
                   ),
-                  Container(
-                    // margin: EdgeInsets.only(top: 30, right: 20),
-                    //transform: Matrix4.rotationZ(100),
-                    child: Stack(
-                      children: [
-                        Container(
-                          //margin: EdgeInsets.only(right: 2.h),
-                          height: 45,
-                          width: 45,
-                          decoration: BoxDecoration(
-                            color: Color(0xffFFFFFF),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          child: Icon(
-                            Icons.shopping_bag_outlined,
-                            color: Colors.black,
-                          ),
-                        ),
-                        Positioned(
-                          left: 30,
-                          child: Container(
-                            padding: EdgeInsets.all(4),
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => cart()));
+                    },
+                    child: Container(
+                      // margin: EdgeInsets.only(top: 30, right: 20),
+                      //transform: Matrix4.rotationZ(100),
+                      child: Stack(
+                        children: [
+                          Container(
+                            //margin: EdgeInsets.only(right: 2.h),
+                            height: 45,
+                            width: 45,
                             decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xffF87265)),
+                              color: Color(0xffFFFFFF),
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: Icon(
+                              Icons.shopping_bag_outlined,
+                              color: Colors.black,
+                            ),
                           ),
-                        ),
-                      ],
+                          Positioned(
+                            left: 30,
+                            child: Container(
+                              padding: EdgeInsets.all(4),
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xffF87265)),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
             SizedBox(
-              height: 3.h,
+              height: 2.5.h,
             ),
             Container(
               height: 50,
@@ -108,7 +116,10 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     width: 10,
                   ),
-                  Text('Looking for shoes'),
+                  Text(
+                    'Looking for shoes',
+                    style: myStyle(14, Color(0xff707B81), FontWeight.w400),
+                  ),
                 ],
               ),
             ),
@@ -193,17 +204,23 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             SizedBox(
-              height: 3.h,
+              height: 2.5.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Popular Shoes"),
-                Text("See all"),
+                Text(
+                  "Popular Shoes",
+                  style: myStyle(16, Color(0xff1A2530), FontWeight.w500),
+                ),
+                Text(
+                  "See all",
+                  style: myStyle(13, Color(0xff5B9EE1), FontWeight.w400),
+                ),
               ],
             ),
             SizedBox(
-              height: 3.h,
+              height: 2.5.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -224,9 +241,39 @@ class _HomePageState extends State<HomePage> {
                       Image.asset(
                         "images/jordan.png",
                       ),
-                      Text("BEST SELLER"),
-                      Text("Nike Jordan"),
-                      Text("\$493.00")
+                      Text(
+                        "BEST SELLER",
+                        style: myStyle(12, Color(0xff5B9EE1), FontWeight.w400),
+                      ),
+                      Text(
+                        "Nike Jordan",
+                        style: myStyle(16, Color(0xff1A2530), FontWeight.w500),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "\$897.00",
+                            style:
+                                myStyle(16, Color(0xff1A2530), FontWeight.w500),
+                          ),
+                          Container(
+                            height: 35.5,
+                            width: 34,
+                            decoration: BoxDecoration(
+                              color: Color(0xff5B9EE1),
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(16),
+                                bottomRight: Radius.circular(16),
+                              ),
+                            ),
+                            child: Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
                     ],
                   ),
                 ),
@@ -246,14 +293,105 @@ class _HomePageState extends State<HomePage> {
                       Image.asset(
                         "images/air.png",
                       ),
-                      Text("BEST SELLER"),
-                      Text("Nike Air Max"),
-                      Text("\$897.00")
+                      Text(
+                        "BEST SELLER",
+                        style: myStyle(12, Color(0xff5B9EE1), FontWeight.w400),
+                      ),
+                      Text(
+                        "Nike Air Max",
+                        style: myStyle(16, Color(0xff1A2530), FontWeight.w500),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "\$897.00",
+                            style:
+                                myStyle(16, Color(0xff1A2530), FontWeight.w500),
+                          ),
+                          Container(
+                            height: 35.5,
+                            width: 34,
+                            decoration: BoxDecoration(
+                              color: Color(0xff5B9EE1),
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(16),
+                                bottomRight: Radius.circular(16),
+                              ),
+                            ),
+                            child: Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
                     ],
                   ),
                 ),
               ],
-            )
+            ),
+            SizedBox(
+              height: 2.h,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "New Arrivals",
+                  style: myStyle(16, Color(0xff1A2530), FontWeight.w500),
+                ),
+                Text("See all",
+                    style: myStyle(13, Color(0xff5B9EE1), FontWeight.w400)),
+              ],
+            ),
+            SizedBox(
+              height: 2.h,
+            ),
+            Container(
+              padding: EdgeInsets.all(16),
+              //margin: EdgeInsets.only(left: 2.h),
+              height: 120,
+              width: 95.w,
+              decoration: BoxDecoration(
+                color: Color(0xffFFFFFF),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "BEST CHOICE",
+                            style:
+                                myStyle(12, Color(0xff5B9EE1), FontWeight.w500),
+                          ),
+                          Text(
+                            "Nike Air Jordan",
+                            style:
+                                myStyle(20, Color(0xff1A2530), FontWeight.w500),
+                          ),
+                          SizedBox(
+                            height: 1.h,
+                          ),
+                          Text(
+                            "\$849.69",
+                            style:
+                                myStyle(16, Color(0xff1A2530), FontWeight.w500),
+                          ),
+                        ],
+                      ),
+                      Image.asset("images/air2.png")
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            NavBar(),
           ],
         ),
       ),
