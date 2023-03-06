@@ -314,19 +314,25 @@ class _HomePageState extends State<HomePage> {
                             style:
                                 myStyle(16, Color(0xff1A2530), FontWeight.w500),
                           ),
-                          Container(
-                            height: 35.5,
-                            width: 34,
-                            decoration: BoxDecoration(
-                              color: Color(0xff5B9EE1),
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(16),
-                                bottomRight: Radius.circular(16),
+                          InkWell(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => cart()));
+                            },
+                            child: Container(
+                              height: 35.5,
+                              width: 34,
+                              decoration: BoxDecoration(
+                                color: Color(0xff5B9EE1),
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(16),
+                                  bottomRight: Radius.circular(16),
+                                ),
                               ),
-                            ),
-                            child: Icon(
-                              Icons.add,
-                              color: Colors.white,
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
                             ),
                           )
                         ],
@@ -366,19 +372,25 @@ class _HomePageState extends State<HomePage> {
                             style:
                                 myStyle(16, Color(0xff1A2530), FontWeight.w500),
                           ),
-                          Container(
-                            height: 35.5,
-                            width: 34,
-                            decoration: BoxDecoration(
-                              color: Color(0xff5B9EE1),
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(16),
-                                bottomRight: Radius.circular(16),
+                          InkWell(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => cart()));
+                            },
+                            child: Container(
+                              height: 35.5,
+                              width: 34,
+                              decoration: BoxDecoration(
+                                color: Color(0xff5B9EE1),
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(16),
+                                  bottomRight: Radius.circular(16),
+                                ),
                               ),
-                            ),
-                            child: Icon(
-                              Icons.add,
-                              color: Colors.white,
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
                             ),
                           )
                         ],

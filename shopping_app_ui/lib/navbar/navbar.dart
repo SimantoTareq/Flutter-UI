@@ -62,13 +62,14 @@ class _NavBarState extends State<NavBar> {
                 ],
               ),
               child: FloatingActionButton(
-                  backgroundColor: Color(0xff5B9EE1),
-                  child: Icon(Icons.shopping_bag_outlined),
-                  elevation: 0.1,
-                  onPressed: () {
-                    Navigator.of(context)
-                        .push(MaterialPageRoute(builder: (context) => cart()));
-                  }),
+                backgroundColor: Color(0xff5B9EE1),
+                child: Icon(Icons.shopping_bag_outlined),
+                elevation: 0.1,
+                onPressed: () {
+                  // Navigator.of(context)
+                  //     .push(MaterialPageRoute(builder: (context) => cart()));
+                },
+              ),
             ),
           ),
           Center(

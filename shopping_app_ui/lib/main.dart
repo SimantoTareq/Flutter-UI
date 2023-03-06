@@ -4,6 +4,7 @@ import 'package:shopping_app_ui/home_page.dart';
 import 'package:shopping_app_ui/navbar/nav_bar.dart';
 import 'package:shopping_app_ui/navbar/navbar.dart';
 import 'package:shopping_app_ui/pages/cart.dart';
+import 'package:shopping_app_ui/splash.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           //title: 'Sizer',
           //theme: ThemeData.light(),
-          home: Home(),
+          home: splash_screen(),
         );
       },
     );

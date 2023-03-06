@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:shopping_app_ui/drawer/mainPage.dart';
 import 'package:shopping_app_ui/navbar/navbar.dart';
 import 'package:shopping_app_ui/style/my_style.dart';
 import 'package:sizer/sizer.dart';
@@ -20,10 +21,10 @@ class _splash_screenState extends State<splash_screen> {
     // TODO: implement initState
     super.initState();
     Timer(
-      Duration(seconds: 2),
+      Duration(seconds: 3),
       () {
         Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => NavBar()));
+            .push(MaterialPageRoute(builder: (context) => Home()));
       },
     );
   }
