@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app_ui/drawer/mainPage.dart';
 import 'package:shopping_app_ui/home_page.dart';
 import 'package:shopping_app_ui/navbar/nav_bar.dart';
 import 'package:shopping_app_ui/navbar/navbar.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           //title: 'Sizer',
           //theme: ThemeData.light(),
-          home: NavBar(),
+          home: Home(),
         );
       },
     );
