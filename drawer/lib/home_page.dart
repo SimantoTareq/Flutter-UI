@@ -1,4 +1,6 @@
+import 'package:drawer/complete_drawer.dart';
 import 'package:drawer/drawer.dart';
+import 'package:drawer/my_drawer_header.dart';
 import 'package:drawer/page2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -20,7 +22,17 @@ class _Home_pageState extends State<Home_page> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: MyDrawer(),
+        drawer: Drawer(
+          child: SingleChildScrollView(
+            child: Container(
+              child: Column(
+                children: [
+                  const CDrawer(),
+                ],
+              ),
+            ),
+          ),
+        ),
         endDrawer: MyDrawer(),
         key: _scaffoldKey,
         appBar: AppBar(

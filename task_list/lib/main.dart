@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_list/NavBar/nav_bar.dart';
+import 'package:task_list/NavBar/nav_bar2.dart';
 import 'package:task_list/home_page.dart';
 
 void main() {
@@ -27,6 +28,6 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: BottomTab());
+        home: BottomNavBar());
   }
 }
