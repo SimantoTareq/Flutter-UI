@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:job_ui/widgets/test.dart';
 
 import '../model/company_info.dart';
 
@@ -148,7 +149,10 @@ class CompanyDetails extends StatelessWidget {
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xff01B2B8)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => testPage(companyInfo.company)));
+                },
                 child: Text('Appy Now')),
           )
         ],

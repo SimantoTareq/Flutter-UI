@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:job_ui/widgets/company_list.dart';
 import 'package:job_ui/widgets/home_appBar.dart';
-import 'package:job_ui/widgets/searchBar.dart';
+import 'package:job_ui/widgets/search.dart';
+
 import 'package:job_ui/widgets/tag_list.dart';
 
 class HomePage extends StatefulWidget {
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> {
           Column(
             children: [
               HomeAppBar(),
-              SearchBar(),
+              search(),
               TagList(),
               CompantList(),
             ],
